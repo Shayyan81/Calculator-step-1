@@ -1,0 +1,246 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 79%, 21%;
+  grid-template-rows: 28px 7fr 24fr 6fr 58.51fr;
+  grid-template-areas:
+    "   header            header"
+    "   standard          history"
+    "   calculator        history"
+    "   memory-btns       history"
+    "   keys              history";
+  background-color: rgb(211, 211, 211);
+}
+
+.top-nav {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-section {
+  padding: 4px;
+}
+
+.right-section {
+  display: flex;
+}
+
+.right-section div {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.right-section div:hover {
+  background-color: rgb(201, 201, 201);
+}
+
+.right-section div:active {
+  background-color: rgb(194, 194, 194);
+}
+
+.close-btn {
+  background-image: url(close.png);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  background-color: red !important;
+}
+
+.close-btn:active {
+  background-color: rgb(165, 0, 0) !important;
+}
+
+.minimize {
+  background-image: url(minimize.png);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.square {
+  background-image: url(square.png);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.history-memory {
+  grid-area: history;
+}
+
+.history-memory-btns {
+  display: flex;
+  gap: 20px;
+  font-weight: 600;
+}
+
+.history-btn {
+  border-bottom: 2px solid orange;
+  padding-bottom: 4px;
+}
+
+.history-memory-box {
+  padding: 24px 0px;
+  font-weight: 600;
+}
+
+.hamberger-icon {
+  background-image: url(2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
+  width: 30px;
+  height: 30px;
+  transition: background-color 0.15s, transform 0.15s;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hamberger-icon:hover {
+  background-color: rgb(201, 201, 201) !important;
+}
+
+.hamberger-icon:active {
+  background-color: rgb(194, 194, 194) !important;
+  transform: scaleX(0.4);
+}
+
+.standard-section {
+  grid-area: standard;
+  display: flex;
+  gap: 20px;
+  padding-left: 6px;
+  font-size: 20px;
+  font-weight: 600;
+  align-items: center;
+}
+
+.standard-right-icon {
+  background-image: url(1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35px;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.calculation-section {
+  grid-area: calculator;
+  font-size: 60px;
+  font-weight: 600;
+  position: relative;
+}
+
+.calculation-section .number {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}
+
+.m-btns-section {
+  grid-area: memory-btns;
+  display: flex;
+  font-weight: 600;
+  gap: 2px;
+}
+
+.m-btns-section .disable {
+  color: gray;
+  cursor: default;
+}
+
+.m-btns-section .disable:hover {
+  background-color: transparent !important;
+}
+
+.m-btns-section .disable:active {
+  background-color: transparent !important;
+}
+
+.m-btns-section div {
+  width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.m-btns-section div:hover {
+  background-color: rgb(201, 201, 201);
+}
+
+.m-btns-section div:active {
+  background-color: rgb(194, 194, 194);
+}
+
+.key-section {
+  grid-area: keys;
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.key-section div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  background-color: rgb(228, 228, 228);
+  transition: background-color 0.15s;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.key-section div:hover {
+  background-color: rgb(201, 201, 201) !important;
+}
+
+.key-section div:active {
+  background-color: rgb(194, 194, 194) !important;
+}
+
+.key-section div.number-btn {
+  background-color: rgb(244, 244, 244);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.delete-btn {
+  background-image: url(del.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px;
+}
