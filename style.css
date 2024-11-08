@@ -8,7 +8,7 @@
 body {
   height: 100vh;
   display: grid;
-  grid-template-columns: 79%, 21%;
+  grid-template-columns: 79% 21%;
   grid-template-rows: 28px 7fr 24fr 6fr 58.51fr;
   grid-template-areas:
     "   header            header"
@@ -243,4 +243,66 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 25px;
+}
+
+@media (max-width: 768px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 28px auto auto auto auto;
+    grid-template-areas:
+      "header"
+      "standard"
+      "calculator"
+      "memory-btns"
+      "keys";
+  }
+
+  .top-nav {
+    padding: 0 8px;
+  }
+
+  .right-section div {
+    width: 30px;
+    height: 30px;
+    background-size: 15px;
+  }
+
+  .calculation-section {
+    font-size: 36px;
+    padding-right: 16px;
+  }
+
+  .key-section {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+  }
+
+  .m-btns-section div,
+  .key-section div {
+    width: 100%;
+    height: 50px;
+  }
+
+  .history-memory {
+    display: none;
+  }
+
+  .m-btns-section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+  }
+
+  .standard-section {
+    font-size: 18px;
+    padding-left: 4px;
+  }
+
+  .key-section div {
+    font-size: 18px;
+  }
+
+  .m-btns-section div {
+    font-size: 14px;
+  }
 }
