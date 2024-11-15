@@ -34,7 +34,7 @@ body {
 }
 
 .right-section div {
-  width: 40px;
+  width: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,7 +51,7 @@ body {
 }
 
 .close-btn {
-  background-image: url(close.png);
+  background-image:url("Image/close.png");
   background-repeat: no-repeat;
   background-size: 20px;
   width: 20px;
@@ -70,7 +70,7 @@ body {
 }
 
 .minimize {
-  background-image: url(minimize.png);
+  background-image: url(Image/minimize.png);
   background-repeat: no-repeat;
   background-size: 20px;
   width: 20px;
@@ -81,7 +81,7 @@ body {
 }
 
 .square {
-  background-image: url(square.png);
+  background-image: url(Image/square.png);
   background-repeat: no-repeat;
   background-size: 20px;
   width: 20px;
@@ -112,7 +112,7 @@ body {
 }
 
 .hamberger-icon {
-  background-image: url(2.png);
+  background-image: url(Image/2.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 30px;
@@ -143,7 +143,7 @@ body {
 }
 
 .standard-right-icon {
-  background-image: url(1.png);
+  background-image: url(Image/1.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 35px;
@@ -244,7 +244,7 @@ body {
 }
 
 .delete-btn {
-  background-image: url(del.png);
+  background-image: url(Image/del.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 25px;
@@ -252,8 +252,9 @@ body {
 
 @media (max-width: 768px) {
   body {
+    height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 28px auto auto auto auto;
+    grid-template-rows: 28px auto auto 50px 310px;
     grid-template-areas:
       "header"
       "standard"
@@ -263,7 +264,7 @@ body {
   }
 
   .top-nav {
-    padding: 0 8px;
+    padding: 0px;
   }
 
   .right-section div {
@@ -279,7 +280,6 @@ body {
 
   .key-section {
     grid-template-columns: repeat(4, 1fr);
-    gap: 4px;
   }
 
   .m-btns-section div,
@@ -295,7 +295,9 @@ body {
   .m-btns-section {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    height: 20px;
     gap: 4px;
+    font-weight: 800;
   }
 
   .standard-section {
