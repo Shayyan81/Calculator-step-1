@@ -53,7 +53,7 @@ body {
 .close-btn {
   background-image:url("Image/close.png");
   background-repeat: no-repeat;
-  background-size: 20px;
+  background-size: 17px;
   width: 20px;
   height: 20px;
   display: flex;
@@ -72,7 +72,7 @@ body {
 .minimize {
   background-image: url(Image/minimize.png);
   background-repeat: no-repeat;
-  background-size: 20px;
+  background-size: 17px;
   width: 20px;
   height: 20px;
   display: flex;
@@ -83,7 +83,7 @@ body {
 .square {
   background-image: url(Image/square.png);
   background-repeat: no-repeat;
-  background-size: 20px;
+  background-size: 17px;
   width: 20px;
   height: 20px;
   display: flex;
@@ -254,7 +254,7 @@ body {
   body {
     height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 28px auto auto 50px 310px;
+    grid-template-rows: 28px 35px auto 50px 310px;
     grid-template-areas:
       "header"
       "standard"
