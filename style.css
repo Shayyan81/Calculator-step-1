@@ -2,7 +2,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: Segoe UI;
+  font-weight: 200;
 }
 
 body {
@@ -26,7 +27,7 @@ body {
 }
 
 .left-section {
-  padding: 4px;
+  margin: 5px 30px;
 }
 
 .right-section {
@@ -51,7 +52,7 @@ body {
 }
 
 .close-btn {
-  background-image:url("Image/close.png");
+  background-image: url("Image/close.png");
   background-repeat: no-repeat;
   background-size: 17px;
   width: 20px;
@@ -101,9 +102,13 @@ body {
   font-weight: 600;
 }
 
+.history-memory-btns div:hover {
+  color: rgb(184, 184, 184);
+}
+
 .history-btn {
-  border-bottom: 2px solid orange;
-  padding-bottom: 4px;
+  border-bottom: 2px solid darkblue;
+  padding-bottom: 3px;
 }
 
 .history-memory-box {
@@ -111,7 +116,7 @@ body {
   font-weight: 600;
 }
 
-.hamberger-icon {
+.hamburger-icon {
   background-image: url(Image/2.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -123,11 +128,11 @@ body {
   cursor: pointer;
 }
 
-.hamberger-icon:hover {
+.hamburger-icon:hover {
   background-color: rgb(201, 201, 201) !important;
 }
 
-.hamberger-icon:active {
+.hamburger-icon:active {
   background-color: rgb(194, 194, 194) !important;
   transform: scaleX(0.4);
 }
@@ -137,8 +142,8 @@ body {
   display: flex;
   gap: 20px;
   padding-left: 6px;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 19px;
+  font-weight: 700;
   align-items: center;
 }
 
@@ -151,6 +156,10 @@ body {
   height: 30px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.standard-right-icon:hover {
+  background-color: rgb(201, 201, 201) !important;
 }
 
 .calculation-section {
@@ -207,7 +216,8 @@ body {
 .key-section {
   grid-area: keys;
   display: grid;
-  gap: 2px;
+  row-gap: 2px;
+  column-gap: 2px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6, 1fr);
 }
@@ -216,11 +226,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 2px;
+  border-radius: 6px;
   background-color: rgb(228, 228, 228);
   transition: background-color 0.15s;
   cursor: pointer;
-  font-weight: 700;
   font-size: 18px;
 }
 .close-btn,
@@ -240,17 +249,29 @@ body {
 .key-section div.number-btn {
   background-color: rgb(244, 244, 244);
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 350;
 }
 
 .delete-btn {
   background-image: url(Image/del.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 25px;
+  background-size: 19px;
 }
 
-@media (max-width: 768px) {
+.equal-key {
+  background-color: #005a9e !important;
+}
+
+.equal-key div:hover {
+  background-color: #1c659c;
+}
+
+.equal-key div:active {
+  background-color: #005a9e;
+}
+
+@media (max-width: 650px) {
   body {
     height: 100vh;
     grid-template-columns: 1fr;
